@@ -10,11 +10,11 @@ using ZedGraph;
 
 namespace RNUT
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         Ur_Dif dif;
         double t, time;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();           
             zedGraphControl1.GraphPane.Title.Text = "Functions U1(x) and U2(x)";
@@ -74,7 +74,7 @@ namespace RNUT
             dif.start(Convert.ToInt32(NUD_mem_step.Text));
             dif.plot(zedGraphControl1);
             time += t * Convert.ToDouble(NUD_mem_step.Text);
-            LB_Time.Text = "Time = " +Convert.ToString(time);
+            LB_Time.Text = "Текущее время = " + Convert.ToString(time);
         }
 
         private void BT_Stop_Click(object sender, EventArgs e)
@@ -84,10 +84,17 @@ namespace RNUT
 
         private void BT_Start_Click(object sender, EventArgs e)
         {
-            zedGraphControl1.GraphPane.YAxis.Scale.Min = Convert.ToDouble(TB_min_Y.Text);
-            zedGraphControl1.GraphPane.YAxis.Scale.Max = Convert.ToDouble(TB_max_Y.Text);
-            timer1.Interval = Convert.ToInt32(NUD_Tick.Text);
-            timer1.Start();
+            if (dif == null)
+            {
+                BT_GO_Click(sender, e);
+            }
+            else
+            {
+                zedGraphControl1.GraphPane.YAxis.Scale.Min = Convert.ToDouble(TB_min_Y.Text);
+                zedGraphControl1.GraphPane.YAxis.Scale.Max = Convert.ToDouble(TB_max_Y.Text);
+                timer1.Interval = Convert.ToInt32(NUD_Tick.Text);
+                timer1.Start();
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
