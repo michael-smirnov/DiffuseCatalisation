@@ -60,7 +60,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="ZedGraph">
-      <HintPath>..\..\..\..\..\гугл качалка\StationaryEquation\StationaryEquation\StationaryEquation\bin\Debug\ZedGraph.dll</HintPath>
+      <HintPath>..\..\..\..\Программные библиотеки\ZedGraph\zedgraph_dll_v515\zedgraph_dll_v5.1.5\ZedGraph.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
