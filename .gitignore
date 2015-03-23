@@ -1,3 +1,4 @@
 RNUT/RNUT/bin/Debug/ZedGraph.xml
 RNUT/RNUT/obj/x86/Debug/RNUT.csproj.FileListAbsolute.txt
 *.resources
+*.manifest

@@ -26,6 +26,18 @@ namespace RNUT
            
         }
 
+        private void setDiffParameters()
+        {
+            dif.set_c(Convert.ToDouble(TB_c.Text));
+            dif.set_y(Convert.ToDouble(TB_y.Text));
+            dif.set_v(Convert.ToDouble(TB_v.Text));
+            dif.set_t(Convert.ToDouble(TB_t.Text));
+            dif.set_p(Convert.ToDouble(TB_p.Text));
+            dif.set_k(Convert.ToDouble(TB_k.Text));
+            dif.set_lymb1(Convert.ToDouble(TB_lymb1.Text));
+            dif.set_lymb2(Convert.ToDouble(TB_lymb2.Text));
+        }
+
         private void BT_GO_Click(object sender, EventArgs e)
         {
             zedGraphControl1.GraphPane.YAxis.Scale.Min = Convert.ToDouble(TB_min_Y.Text);
@@ -54,14 +66,7 @@ namespace RNUT
 
 
             dif = new Ur_Dif(l,coef_u1,coef_u2,5);
-            dif.set_c(Convert.ToDouble(TB_c.Text));
-            dif.set_y(Convert.ToDouble(TB_y.Text));
-            dif.set_v(Convert.ToDouble(TB_v.Text));
-            dif.set_t(Convert.ToDouble(TB_t.Text));
-            dif.set_p(Convert.ToDouble(TB_p.Text));
-            dif.set_k(Convert.ToDouble(TB_k.Text));
-            dif.set_lymb1(Convert.ToDouble(TB_lymb1.Text));
-            dif.set_lymb2(Convert.ToDouble(TB_lymb2.Text));
+            setDiffParameters();
             dif.set_n(Convert.ToInt32(NUD_n.Text));
             timer1.Interval = Convert.ToInt32(NUD_Tick.Text);
             t = Convert.ToDouble(TB_t.Text);
@@ -92,6 +97,7 @@ namespace RNUT
             {
                 zedGraphControl1.GraphPane.YAxis.Scale.Min = Convert.ToDouble(TB_min_Y.Text);
                 zedGraphControl1.GraphPane.YAxis.Scale.Max = Convert.ToDouble(TB_max_Y.Text);
+                setDiffParameters();
                 timer1.Interval = Convert.ToInt32(NUD_Tick.Text);
                 timer1.Start();
             }
