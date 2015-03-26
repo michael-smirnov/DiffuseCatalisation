@@ -85,6 +85,7 @@
             this.GB_GRID = new System.Windows.Forms.GroupBox();
             this.GB_ProgramParameters = new System.Windows.Forms.GroupBox();
             this.GB_GraphParameters = new System.Windows.Forms.GroupBox();
+            this.LB_Step = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_n)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Tick)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_mem_step)).BeginInit();
@@ -275,7 +276,7 @@
             // BT_GO
             // 
             this.BT_GO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BT_GO.Location = new System.Drawing.Point(12, 476);
+            this.BT_GO.Location = new System.Drawing.Point(12, 485);
             this.BT_GO.Name = "BT_GO";
             this.BT_GO.Size = new System.Drawing.Size(116, 36);
             this.BT_GO.TabIndex = 21;
@@ -324,7 +325,7 @@
             // BT_Stop
             // 
             this.BT_Stop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BT_Stop.Location = new System.Drawing.Point(134, 476);
+            this.BT_Stop.Location = new System.Drawing.Point(134, 486);
             this.BT_Stop.Name = "BT_Stop";
             this.BT_Stop.Size = new System.Drawing.Size(116, 36);
             this.BT_Stop.TabIndex = 29;
@@ -352,7 +353,7 @@
             // BT_Start
             // 
             this.BT_Start.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BT_Start.Location = new System.Drawing.Point(256, 476);
+            this.BT_Start.Location = new System.Drawing.Point(256, 486);
             this.BT_Start.Name = "BT_Start";
             this.BT_Start.Size = new System.Drawing.Size(116, 36);
             this.BT_Start.TabIndex = 31;
@@ -431,7 +432,7 @@
             this.LB_Time.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LB_Time.AutoSize = true;
             this.LB_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LB_Time.Location = new System.Drawing.Point(9, 448);
+            this.LB_Time.Location = new System.Drawing.Point(12, 444);
             this.LB_Time.Name = "LB_Time";
             this.LB_Time.Size = new System.Drawing.Size(128, 16);
             this.LB_Time.TabIndex = 39;
@@ -804,11 +805,23 @@
             this.GB_GraphParameters.TabStop = false;
             this.GB_GraphParameters.Text = "Параметры графика";
             // 
+            // LB_Step
+            // 
+            this.LB_Step.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LB_Step.AutoSize = true;
+            this.LB_Step.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.LB_Step.Location = new System.Drawing.Point(12, 464);
+            this.LB_Step.Name = "LB_Step";
+            this.LB_Step.Size = new System.Drawing.Size(61, 16);
+            this.LB_Step.TabIndex = 65;
+            this.LB_Step.Text = "Слой = 0";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(833, 533);
+            this.Controls.Add(this.LB_Step);
             this.Controls.Add(this.GB_GraphParameters);
             this.Controls.Add(this.GB_ProgramParameters);
             this.Controls.Add(this.GB_GRID);
@@ -902,6 +915,7 @@
         private System.Windows.Forms.GroupBox GB_GRID;
         private System.Windows.Forms.GroupBox GB_ProgramParameters;
         private System.Windows.Forms.GroupBox GB_GraphParameters;
+        private System.Windows.Forms.Label LB_Step;
     }
 }
 

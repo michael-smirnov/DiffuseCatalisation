@@ -15,6 +15,7 @@ namespace RNUT
         int count_fun;
         int n;
         int step = 0;
+        ulong layerNum = 0;
         int u1_x_0;
         int u2_x_0;
         double[] points;
@@ -99,6 +100,10 @@ namespace RNUT
             }
             set_u();
         }
+        public ulong get_layerNum()
+        {
+            return layerNum;
+        }
         void set_u()
         {
             double[] u1, u2;
@@ -151,6 +156,7 @@ namespace RNUT
             u1_list.Add(u1);
             u2_list.Add(u2);
             step++;
+            layerNum += Convert.ToUInt64(m);
         }
         public void plot(ZedGraphControl zGraph )
         {
@@ -162,8 +168,8 @@ namespace RNUT
                 u.Add(points[i], u1_list[step][i]);
                 v.Add(points[i], u2_list[step][i]);
             }
-            zGraph.GraphPane.AddCurve("u2(x)", v, System.Drawing.Color.Red, SymbolType.None);
-            zGraph.GraphPane.AddCurve("u1(x)", u, System.Drawing.Color.Green, SymbolType.None);
+            zGraph.GraphPane.AddCurve("u1(x) - активатор", u, System.Drawing.Color.Green, SymbolType.None);
+            zGraph.GraphPane.AddCurve("u2(x) - ингибитор", v, System.Drawing.Color.Red, SymbolType.None);
             zGraph.AxisChange();
             zGraph.Invalidate();
         }

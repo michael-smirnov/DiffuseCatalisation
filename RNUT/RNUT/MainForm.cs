@@ -17,7 +17,9 @@ namespace RNUT
         public MainForm()
         {
             InitializeComponent();           
-            zedGraphControl1.GraphPane.Title.Text = "Functions U1(x) and U2(x)";
+            zedGraphControl1.GraphPane.Title.Text = "Функции u1(x) и u2(x)";
+            zedGraphControl1.GraphPane.XAxis.Title.Text = "Ось х";
+            zedGraphControl1.GraphPane.YAxis.Title.Text = "Ось u";
             zedGraphControl1.GraphPane.XAxis.Scale.Min = 0;
             zedGraphControl1.GraphPane.XAxis.Scale.Max = 1;
             zedGraphControl1.GraphPane.YAxis.Scale.Min = Convert.ToDouble(TB_min_Y.Text);
@@ -80,6 +82,7 @@ namespace RNUT
             dif.plot(zedGraphControl1);
             time += t * Convert.ToDouble(NUD_mem_step.Text);
             LB_Time.Text = "Текущее время = " + Convert.ToString(time);
+            LB_Step.Text = "Слой = " + dif.get_layerNum();
         }
 
         private void BT_Stop_Click(object sender, EventArgs e)
