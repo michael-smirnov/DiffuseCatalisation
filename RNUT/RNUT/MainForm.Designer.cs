@@ -89,7 +89,12 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -110,12 +115,8 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CB_STAT_SOL = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_n)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Tick)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_mem_step)).BeginInit();
@@ -132,13 +133,13 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TB_p
@@ -373,9 +374,9 @@
             // 
             // zedGraphControl1
             // 
-            this.zedGraphControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.zedGraphControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.zedGraphControl1.Location = new System.Drawing.Point(12, 12);
             this.zedGraphControl1.Name = "zedGraphControl1";
             this.zedGraphControl1.ScrollGrace = 0D;
@@ -854,8 +855,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(675, 226);
@@ -866,6 +867,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.CB_STAT_SOL);
             this.tabPage1.Controls.Add(this.BT_Stop);
             this.tabPage1.Controls.Add(this.GB_GU);
             this.tabPage1.Controls.Add(this.BT_GO);
@@ -875,7 +877,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(281, 288);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Одиночный эксперимент";
+            this.tabPage1.Text = "  ";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -895,18 +897,63 @@
             this.tabPage2.Text = "Сравнение решений";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // button3
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.Controls.Add(this.LB_Time);
-            this.groupBox1.Controls.Add(this.LB_Step);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 548);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(237, 76);
-            this.groupBox1.TabIndex = 67;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Информация о эксперименте";
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.Location = new System.Drawing.Point(97, 245);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(85, 36);
+            this.button3.TabIndex = 67;
+            this.button3.Text = "Пауза";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button4.Location = new System.Drawing.Point(6, 245);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(85, 36);
+            this.button4.TabIndex = 66;
+            this.button4.Text = "Решать сначала";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button5.Location = new System.Drawing.Point(188, 245);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(85, 36);
+            this.button5.TabIndex = 68;
+            this.button5.Text = "Продолжить";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(105, 142);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 35);
+            this.button2.TabIndex = 65;
+            this.button2.Text = "Удалить НУ...";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(5, 142);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 35);
+            this.button1.TabIndex = 64;
+            this.button1.Text = "Добавить НУ...";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(6, 183);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(267, 56);
+            this.listBox1.TabIndex = 63;
             // 
             // groupBox2
             // 
@@ -1177,63 +1224,28 @@
             this.textBox10.TabIndex = 52;
             this.textBox10.Text = "0";
             // 
-            // listBox1
+            // groupBox1
             // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(6, 183);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(267, 56);
-            this.listBox1.TabIndex = 63;
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.LB_Time);
+            this.groupBox1.Controls.Add(this.LB_Step);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.groupBox1.Location = new System.Drawing.Point(12, 548);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(237, 76);
+            this.groupBox1.TabIndex = 67;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Информация о эксперименте";
             // 
-            // button1
+            // CB_STAT_SOL
             // 
-            this.button1.Location = new System.Drawing.Point(5, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 35);
-            this.button1.TabIndex = 64;
-            this.button1.Text = "Добавить НУ...";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(105, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 35);
-            this.button2.TabIndex = 65;
-            this.button2.Text = "Удалить НУ...";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.Location = new System.Drawing.Point(97, 245);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 36);
-            this.button3.TabIndex = 67;
-            this.button3.Text = "Пауза";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button4.Location = new System.Drawing.Point(6, 245);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 36);
-            this.button4.TabIndex = 66;
-            this.button4.Text = "Решать сначала";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.Location = new System.Drawing.Point(188, 245);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 36);
-            this.button5.TabIndex = 68;
-            this.button5.Text = "Продолжить";
-            this.button5.UseVisualStyleBackColor = true;
+            this.CB_STAT_SOL.AutoSize = true;
+            this.CB_STAT_SOL.Location = new System.Drawing.Point(6, 194);
+            this.CB_STAT_SOL.Name = "CB_STAT_SOL";
+            this.CB_STAT_SOL.Size = new System.Drawing.Size(197, 17);
+            this.CB_STAT_SOL.TabIndex = 62;
+            this.CB_STAT_SOL.Text = "Выводить стационарное решение";
+            this.CB_STAT_SOL.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -1269,9 +1281,8 @@
             this.GB_GraphParameters.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -1279,6 +1290,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1372,6 +1385,7 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.CheckBox CB_STAT_SOL;
     }
 }
 

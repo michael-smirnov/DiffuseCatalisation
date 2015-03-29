@@ -79,7 +79,7 @@ namespace RNUT
         private void timer1_Tick(object sender, EventArgs e)
         {
             dif.start(Convert.ToInt32(NUD_mem_step.Text));
-            dif.plot(zedGraphControl1);
+            dif.plot(zedGraphControl1, CB_STAT_SOL.Checked);
             time += t * Convert.ToDouble(NUD_mem_step.Text);
             LB_Time.Text = "Текущее время = " + Convert.ToString(time);
             LB_Step.Text = "Слой = " + dif.get_layerNum();

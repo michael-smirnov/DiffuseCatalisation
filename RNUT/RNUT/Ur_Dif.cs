@@ -158,7 +158,7 @@ namespace RNUT
             step++;
             layerNum += Convert.ToUInt64(m);
         }
-        public void plot(ZedGraphControl zGraph )
+        public void plot(ZedGraphControl zGraph, bool visibleStatSolution )
         {
             zGraph.GraphPane.CurveList.Clear();
             PointPairList u = new PointPairList();
@@ -170,6 +170,25 @@ namespace RNUT
             }
             zGraph.GraphPane.AddCurve("u1(x) - активатор", u, System.Drawing.Color.Green, SymbolType.None);
             zGraph.GraphPane.AddCurve("u2(x) - ингибитор", v, System.Drawing.Color.Red, SymbolType.None);
+
+            if (visibleStatSolution)
+            {
+                double u1Stat = (this.v / this.c + this.p) / this.y;
+                double u2Stat = u1Stat * u1Stat * this.c / this.v;
+
+                PointPairList uStat = new PointPairList();
+                PointPairList vStat = new PointPairList();
+                for (int i = 0; i < n + 1; i++)
+                {
+                    uStat.Add(points[i], u1Stat);
+                    vStat.Add(points[i], u2Stat);
+                }
+                var u1Curve = zGraph.GraphPane.AddCurve("u1* - стац. решение для активатора", uStat, System.Drawing.Color.Green, SymbolType.None);
+                u1Curve.Line.Style = System.Drawing.Drawing2D.DashStyle.Dash;
+                var u2Curve = zGraph.GraphPane.AddCurve("u2* - стац. решение для ингибитора", vStat, System.Drawing.Color.Red, SymbolType.None);
+                u2Curve.Line.Style = System.Drawing.Drawing2D.DashStyle.Dash;
+            }
+
             zGraph.AxisChange();
             zGraph.Invalidate();
         }
