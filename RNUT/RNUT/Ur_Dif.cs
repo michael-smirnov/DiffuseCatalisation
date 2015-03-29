@@ -102,6 +102,10 @@ namespace RNUT
             }
             set_u();
         }
+        public int get_n()
+        {
+            return n;
+        }
         public ulong get_layerNum()
         {
             return layerNum;
@@ -159,7 +163,36 @@ namespace RNUT
             step++;
             layerNum += Convert.ToUInt64(m);
         }
+<<<<<<< HEAD
         public void plot(ZedGraphControl zGraph, System.Windows.Forms.Label LB_norm1, System.Windows.Forms.Label LB_norm2)
+=======
+
+        public double[] CurrentU1
+        {
+            get
+            {
+                return u1_list[step];
+            }
+        }
+
+        public double[] CurrentU2
+        {
+            get
+            {
+                return u2_list[step];
+            }
+        }
+
+        public double[] Points
+        {
+            get
+            {
+                return points;
+            }
+        }
+
+        public void plot(ZedGraphControl zGraph )
+>>>>>>> origin/master
         {
             zGraph.GraphPane.CurveList.Clear();
             Double max_1 = 0, max_2 = 0;
