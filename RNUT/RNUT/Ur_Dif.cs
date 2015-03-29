@@ -158,6 +158,19 @@ namespace RNUT
             step++;
             layerNum += Convert.ToUInt64(m);
         }
+
+        public bool isDivirge()
+        {
+            bool result = false;
+            double maxLymbd = lymb1;
+            if (lymb2 > maxLymbd) maxLymbd = lymb2;
+
+            if (t > h * h / (2.0 * maxLymbd))
+                result = true;
+
+            return result;
+        }
+
         public void plot(ZedGraphControl zGraph, bool visibleStatSolution )
         {
             zGraph.GraphPane.CurveList.Clear();
@@ -173,7 +186,7 @@ namespace RNUT
 
             if (visibleStatSolution)
             {
-                double u1Stat = (this.v / this.c + this.p) / this.y;
+                double u1Stat = (this.k * this.v / this.c + this.p) / this.y;
                 double u2Stat = u1Stat * u1Stat * this.c / this.v;
 
                 PointPairList uStat = new PointPairList();
