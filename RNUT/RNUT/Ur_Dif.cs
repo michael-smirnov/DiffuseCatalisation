@@ -189,15 +189,25 @@ namespace RNUT
                 u.Add(points[i], star_u1[i]);
                 v.Add(points[i], star_u2[i]);
             }
-            zGraph.GraphPane.AddCurve("u1(0) - активатор", u, System.Drawing.Color.Black, SymbolType.None);
-            zGraph.GraphPane.AddCurve("u2(0) - ингибитор", v, System.Drawing.Color.Blue, SymbolType.None);
+            LineItem i1 = zGraph.GraphPane.AddCurve("u1(0) - активатор", u, System.Drawing.Color.DarkGreen, SymbolType.None);
+            i1.Line.Style = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            i1.Line.IsSmooth = true;
+
+            LineItem i2 = zGraph.GraphPane.AddCurve("u2(0) - ингибитор", v, System.Drawing.Color.DarkRed, SymbolType.None);
+            i2.Line.Style = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            i2.Line.IsSmooth = true;
     
             zGraph.AxisChange();
             zGraph.Invalidate();
         }
-        public void Show_tabl()
+        public void Show_tablU1()
         {
-            Tabl tmp = new Tabl(n,u1_list[step],u2_list[step]);
+            Tabl tmp = new Tabl(n, u1_list[step], "u1(x)");
+            tmp.Show();
+        }
+        public void Show_tablU2()
+        {
+            Tabl tmp = new Tabl(n, u2_list[step], "u2(x)");
             tmp.Show();
         }
     }

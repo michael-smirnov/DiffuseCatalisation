@@ -88,6 +88,7 @@
             this.LB_Step = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.BT_tablU1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -116,10 +117,10 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.LB_norm_u1 = new System.Windows.Forms.Label();
             this.LB_norm_u2 = new System.Windows.Forms.Label();
+            this.LB_norm_u1 = new System.Windows.Forms.Label();
             this.CB_nu = new System.Windows.Forms.CheckBox();
-            this.BT_tabl = new System.Windows.Forms.Button();
+            this.BT_tablU2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_n)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Tick)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_mem_step)).BeginInit();
@@ -808,9 +809,9 @@
             this.GB_GRID.Controls.Add(this.NUD_n);
             this.GB_GRID.Controls.Add(this.TB_t);
             this.GB_GRID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GB_GRID.Location = new System.Drawing.Point(513, 522);
+            this.GB_GRID.Location = new System.Drawing.Point(513, 520);
             this.GB_GRID.Name = "GB_GRID";
-            this.GB_GRID.Size = new System.Drawing.Size(273, 76);
+            this.GB_GRID.Size = new System.Drawing.Size(273, 78);
             this.GB_GRID.TabIndex = 62;
             this.GB_GRID.TabStop = false;
             this.GB_GRID.Text = "Параметры сетки";
@@ -865,12 +866,14 @@
             this.tabControl1.Location = new System.Drawing.Point(671, 226);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(289, 286);
+            this.tabControl1.Size = new System.Drawing.Size(289, 288);
             this.tabControl1.TabIndex = 66;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.BT_tabl);
+            this.tabPage1.Controls.Add(this.BT_tablU2);
+            this.tabPage1.Controls.Add(this.CB_nu);
+            this.tabPage1.Controls.Add(this.BT_tablU1);
             this.tabPage1.Controls.Add(this.BT_Stop);
             this.tabPage1.Controls.Add(this.GB_GU);
             this.tabPage1.Controls.Add(this.BT_GO);
@@ -878,10 +881,21 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(281, 260);
+            this.tabPage1.Size = new System.Drawing.Size(281, 262);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Одиночный эксперимент";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // BT_tablU1
+            // 
+            this.BT_tablU1.Enabled = false;
+            this.BT_tablU1.Location = new System.Drawing.Point(6, 184);
+            this.BT_tablU1.Name = "BT_tablU1";
+            this.BT_tablU1.Size = new System.Drawing.Size(129, 36);
+            this.BT_tablU1.TabIndex = 62;
+            this.BT_tablU1.Text = "Показать таблицу u1(x)";
+            this.BT_tablU1.UseVisualStyleBackColor = true;
+            this.BT_tablU1.Click += new System.EventHandler(this.BT_tabl_Click);
             // 
             // tabPage2
             // 
@@ -895,7 +909,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(281, 288);
+            this.tabPage2.Size = new System.Drawing.Size(281, 260);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Сравнение решений";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1242,17 +1256,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Информация о эксперименте";
             // 
-            // LB_norm_u1
-            // 
-            this.LB_norm_u1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LB_norm_u1.AutoSize = true;
-            this.LB_norm_u1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.LB_norm_u1.Location = new System.Drawing.Point(6, 18);
-            this.LB_norm_u1.Name = "LB_norm_u1";
-            this.LB_norm_u1.Size = new System.Drawing.Size(74, 13);
-            this.LB_norm_u1.TabIndex = 66;
-            this.LB_norm_u1.Text = "Норма u1 = 0";
-            // 
             // LB_norm_u2
             // 
             this.LB_norm_u2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1264,34 +1267,44 @@
             this.LB_norm_u2.TabIndex = 67;
             this.LB_norm_u2.Text = "Норма u2 = 0";
             // 
+            // LB_norm_u1
+            // 
+            this.LB_norm_u1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LB_norm_u1.AutoSize = true;
+            this.LB_norm_u1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.LB_norm_u1.Location = new System.Drawing.Point(6, 18);
+            this.LB_norm_u1.Name = "LB_norm_u1";
+            this.LB_norm_u1.Size = new System.Drawing.Size(74, 13);
+            this.LB_norm_u1.TabIndex = 66;
+            this.LB_norm_u1.Text = "Норма u1 = 0";
+            // 
             // CB_nu
             // 
             this.CB_nu.AutoSize = true;
-            this.CB_nu.Location = new System.Drawing.Point(377, 0);
+            this.CB_nu.Location = new System.Drawing.Point(6, 226);
             this.CB_nu.Name = "CB_nu";
-            this.CB_nu.Size = new System.Drawing.Size(94, 17);
+            this.CB_nu.Size = new System.Drawing.Size(177, 17);
             this.CB_nu.TabIndex = 68;
-            this.CB_nu.Text = "Показать НУ";
+            this.CB_nu.Text = "Показать начальные условия";
             this.CB_nu.UseVisualStyleBackColor = true;
             this.CB_nu.CheckedChanged += new System.EventHandler(this.CB_nu_CheckedChanged);
             // 
-            // BT_tabl
+            // BT_tablU2
             // 
-            this.BT_tabl.Enabled = false;
-            this.BT_tabl.Location = new System.Drawing.Point(6, 184);
-            this.BT_tabl.Name = "BT_tabl";
-            this.BT_tabl.Size = new System.Drawing.Size(85, 36);
-            this.BT_tabl.TabIndex = 62;
-            this.BT_tabl.Text = "Показать таблицу";
-            this.BT_tabl.UseVisualStyleBackColor = true;
-            this.BT_tabl.Click += new System.EventHandler(this.BT_tabl_Click);
+            this.BT_tablU2.Enabled = false;
+            this.BT_tablU2.Location = new System.Drawing.Point(141, 184);
+            this.BT_tablU2.Name = "BT_tablU2";
+            this.BT_tablU2.Size = new System.Drawing.Size(132, 36);
+            this.BT_tablU2.TabIndex = 69;
+            this.BT_tablU2.Text = "Показать таблицу u2(x)";
+            this.BT_tablU2.UseVisualStyleBackColor = true;
+            this.BT_tablU2.Click += new System.EventHandler(this.BT_tablU2_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(967, 608);
-            this.Controls.Add(this.CB_nu);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.GB_GraphParameters);
             this.Controls.Add(this.GB_eqParameters);
@@ -1321,6 +1334,7 @@
             this.GB_GraphParameters.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1332,7 +1346,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1428,7 +1441,8 @@
         private System.Windows.Forms.Label LB_norm_u2;
         private System.Windows.Forms.Label LB_norm_u1;
         private System.Windows.Forms.CheckBox CB_nu;
-        private System.Windows.Forms.Button BT_tabl;
+        private System.Windows.Forms.Button BT_tablU1;
+        private System.Windows.Forms.Button BT_tablU2;
     }
 }
 

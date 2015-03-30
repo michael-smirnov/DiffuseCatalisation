@@ -12,34 +12,40 @@ namespace RNUT
     public partial class Tabl : Form
     {
         int n;
-        double[] u1, u2;
-        public Tabl(int n_,double[] u1_,double[] u2_)
+        double[] u;
+        string uName;
+
+        public Tabl(int n_, double[] u_, string uName_)
         {
             InitializeComponent();
-            n = n_ + 1;
-            u1 = new double[n];
-            u2 = new double[n];
-            for (int i = 0; i < n; i++)
+            uName = uName_;
+            Text = "Таблица значений функции " + uName;
+            n = n_;
+            u = new double[n + 1];
+            for (int i = 0; i < n + 1; i++)
             {
-                u1[i] = u1_[i];
-                u2[i] = u2_[i];
+                u[i] = u_[i];
             }
             plot();
         }
         private void plot()
         {
             dataGridView1.Columns.Clear();
-            dataGridView1.ColumnCount = n + 1;
-            string[] tmp = new string[n + 1];
-            string[] tmp1 = new string[n + 1];
-                for (int i = 0; i < n; i++)
-                {
-                    tmp[i] = Convert.ToString(u1[i]);
-                    tmp1[i] = Convert.ToString(u2[i]);
-                }
+            dataGridView1.Rows.Clear();
+
+            dataGridView1.Columns.Add("colX", "x");
+            dataGridView1.Columns.Add("colU", uName);
+            string[] tmp = new string[2];
+            double h = 1.0 / n;
+            double x = 0;
+            for (int i = 0; i < n + 1; i++)
+            {
+                tmp[0] = Convert.ToString(x);
+                tmp[1] = Convert.ToString(u[i]);
+
+                x += h;
                 dataGridView1.Rows.Add(tmp);
-                dataGridView1.Rows.Add(tmp1);
-            
+            }
         }
     }
 }

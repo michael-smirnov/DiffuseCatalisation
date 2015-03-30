@@ -75,7 +75,8 @@ namespace RNUT
             timer1.Interval = Convert.ToInt32(NUD_Tick.Text);
             t = Convert.ToDouble(TB_t.Text);
             time = 0;
-            BT_tabl.Enabled = false;
+            BT_tablU1.Enabled = false;
+            BT_tablU2.Enabled = false;
             timer1.Start();
 
         }
@@ -96,7 +97,8 @@ namespace RNUT
         private void BT_Stop_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-            BT_tabl.Enabled = true;
+            BT_tablU1.Enabled = true;
+            BT_tablU2.Enabled = true;
         }
 
         private void BT_Start_Click(object sender, EventArgs e)
@@ -113,7 +115,8 @@ namespace RNUT
                 timer1.Interval = Convert.ToInt32(NUD_Tick.Text);
                 timer1.Start();
             }
-            BT_tabl.Enabled = false;
+            BT_tablU1.Enabled = false;
+            BT_tablU2.Enabled = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -219,7 +222,12 @@ namespace RNUT
 
         private void BT_tabl_Click(object sender, EventArgs e)
         {
-            dif.Show_tabl();
+            dif.Show_tablU1();
+        }
+
+        private void BT_tablU2_Click(object sender, EventArgs e)
+        {
+            dif.Show_tablU2();
         }
 
       
