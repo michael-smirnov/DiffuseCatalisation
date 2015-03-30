@@ -77,16 +77,30 @@ namespace RNUT
             dif = new Ur_Dif(l,coef_u1,coef_u2,5);
             setDiffParameters(dif);
             dif.set_n(Convert.ToInt32(NUD_n.Text));
-            timer1.Interval = Convert.ToInt32(NUD_Tick.Text);
-            t = Convert.ToDouble(TB_t.Text);
-            time = 0;
-            timer1.Start();
+
+            DialogResult result = DialogResult.Yes;
+            if (dif.isDivirge() && CB_count_GU.SelectedIndex > 0 &&
+                (TB_GU1_2.Text != "0" || TB_GU1_3.Text != "0" || TB_GU1_4.Text != "0" || TB_GU1_5.Text != "0" ||
+                 TB_GU2_2.Text != "0" || TB_GU2_3.Text != "0" || TB_GU2_4.Text != "0" || TB_GU2_5.Text != "0"))
+            {
+                result = MessageBox.Show("При данных параметрах схема расходится. Продолжить?", "Внимание!",
+                                          MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+            }
+
+            if (result == DialogResult.Yes)
+            {
+                timer1.Interval = Convert.ToInt32(NUD_Tick.Text);
+                t = Convert.ToDouble(TB_t.Text);
+                time = 0;
+
+                timer1.Start();
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             dif.start(Convert.ToInt32(NUD_mem_step.Text));
-            dif.plot(zedGraphControl1);
+            dif.plot(zedGraphControl1, CB_STAT_SOL.Checked);
             time += t * Convert.ToDouble(NUD_mem_step.Text);
             LB_Time.Text = "Текущее время = " + Convert.ToString(time);
             LB_Step.Text = "Слой = " + dif.get_layerNum();

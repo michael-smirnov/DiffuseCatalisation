@@ -88,6 +88,7 @@
             this.LB_Step = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.CB_STAT_SOL = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnPause = new System.Windows.Forms.Button();
             this.btnSolve = new System.Windows.Forms.Button();
@@ -100,6 +101,22 @@
             this.cbNumFunc = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numNU2 = new System.Windows.Forms.NumericUpDown();
             this.numNU3 = new System.Windows.Forms.NumericUpDown();
             this.tbNU2_5 = new System.Windows.Forms.TextBox();
@@ -124,6 +141,7 @@
             this.chbRazn = new System.Windows.Forms.CheckBox();
             this.lbRaznNormAct = new System.Windows.Forms.Label();
             this.lbRaznNormIng = new System.Windows.Forms.Label();
+
             ((System.ComponentModel.ISupportInitialize)(this.NUD_n)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Tick)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_mem_step)).BeginInit();
@@ -141,11 +159,18 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNU2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNU3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNU4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNU5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNU1)).BeginInit();
+
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -381,9 +406,9 @@
             // 
             // zedGraphControl1
             // 
-            this.zedGraphControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.zedGraphControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.zedGraphControl1.Location = new System.Drawing.Point(12, 12);
             this.zedGraphControl1.Name = "zedGraphControl1";
             this.zedGraphControl1.ScrollGrace = 0D;
@@ -862,8 +887,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(674, 226);
@@ -874,6 +899,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.CB_STAT_SOL);
             this.tabPage1.Controls.Add(this.BT_Stop);
             this.tabPage1.Controls.Add(this.GB_GU);
             this.tabPage1.Controls.Add(this.BT_GO);
@@ -885,6 +911,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Одиночный эксперимент";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // CB_STAT_SOL
+            // 
+            this.CB_STAT_SOL.AutoSize = true;
+            this.CB_STAT_SOL.Location = new System.Drawing.Point(6, 194);
+            this.CB_STAT_SOL.Name = "CB_STAT_SOL";
+            this.CB_STAT_SOL.Size = new System.Drawing.Size(197, 17);
+            this.CB_STAT_SOL.TabIndex = 62;
+            this.CB_STAT_SOL.Text = "Выводить стационарное решение";
+            this.CB_STAT_SOL.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -910,7 +946,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Сравнение решений";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
+	        //
             // btnPause
             // 
             this.btnPause.Location = new System.Drawing.Point(96, 435);
@@ -1178,6 +1214,72 @@
             0,
             0,
             0});
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown5.TabIndex = 48;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox4.Location = new System.Drawing.Point(187, 74);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(33, 20);
+            this.textBox4.TabIndex = 55;
+            this.textBox4.Text = "0";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox5.Location = new System.Drawing.Point(62, 74);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(33, 20);
+            this.textBox5.TabIndex = 49;
+            this.textBox5.Text = "1";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox6.Location = new System.Drawing.Point(146, 100);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(33, 20);
+            this.textBox6.TabIndex = 54;
+            this.textBox6.Text = "0";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox7.Location = new System.Drawing.Point(62, 100);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(33, 20);
+            this.textBox7.TabIndex = 50;
+            this.textBox7.Text = "1";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox8.Location = new System.Drawing.Point(146, 74);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(33, 20);
+            this.textBox8.TabIndex = 53;
+            this.textBox8.Text = "0";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox9.Location = new System.Drawing.Point(103, 74);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(33, 20);
+            this.textBox9.TabIndex = 51;
+            this.textBox9.Text = "0";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox10.Location = new System.Drawing.Point(103, 100);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(33, 20);
+            this.textBox10.TabIndex = 52;
+            this.textBox10.Text = "0";
             this.numNU1.Name = "numNU1";
             this.numNU1.Size = new System.Drawing.Size(35, 20);
             this.numNU1.TabIndex = 48;
@@ -1364,7 +1466,15 @@
             this.GB_GraphParameters.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             this.tabPage2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1453,6 +1563,22 @@
         private System.Windows.Forms.ComboBox cbNumFunc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.CheckBox CB_STAT_SOL;
         private System.Windows.Forms.NumericUpDown numNU2;
         private System.Windows.Forms.NumericUpDown numNU3;
         private System.Windows.Forms.TextBox tbNU2_5;
