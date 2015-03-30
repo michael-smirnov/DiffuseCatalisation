@@ -11,6 +11,8 @@ namespace RNUT
         List<double[]> u1_list, u2_list;
         double p, k, y, v, c, lymb1, lymb2, t, h;
         double a, b;
+        double[] star_u1, star_u2;
+            
         double[] l, coef_u1,coef_u2;
         int count_fun;
         int n;
@@ -108,18 +110,17 @@ namespace RNUT
         }
         void set_u()
         {
-            double[] u1, u2;
-            u1 = new double[n + 1];
-            u2 = new double[n + 1];
+            star_u1 = new double[n + 1];
+            star_u2 = new double[n + 1];
             for (int i = 0; i < n + 1; i++)
             {
-                u1[i] = cos(a + h * i, 0);
-                u2[i] = cos(a + h * i, 1);
+                star_u1[i] = cos(a + h * i, 0);
+                star_u2[i] = cos(a + h * i, 1);
             }
             u1_list = new List<double[]>();
             u2_list =new List<double[]>();
-            u1_list.Add(u1);
-            u2_list.Add(u2);
+            u1_list.Add(star_u1);
+            u2_list.Add(star_u2);
         }
         public void start(int m)
         {
@@ -197,16 +198,21 @@ namespace RNUT
             }
         }
 
-        public void plot(ZedGraphControl zGraph, bool visibleStatSolution)
+        public void plot(ZedGraphControl zGraph, System.Windows.Forms.Label LB_norm1, System.Windows.Forms.Label LB_norm2, bool visibleStatSolution)
         {
             zGraph.GraphPane.CurveList.Clear();
+            Double max_1 = 0, max_2 = 0;
             PointPairList u = new PointPairList();
             PointPairList v = new PointPairList();
             for (int i = 0; i < n + 1; i++)
             {
+                max_1 = Math.Max(max_1, u1_list[step][i]);
+                max_2 = Math.Max(max_2, u2_list[step][i]);
                 u.Add(points[i], u1_list[step][i]);
                 v.Add(points[i], u2_list[step][i]);
             }
+            LB_norm1.Text = "Норма u1 = " + max_1.ToString();
+            LB_norm2.Text = "Норма u2 = " + max_2.ToString();
             zGraph.GraphPane.AddCurve("u1(x) - активатор", u, System.Drawing.Color.Green, SymbolType.None);
             zGraph.GraphPane.AddCurve("u2(x) - ингибитор", v, System.Drawing.Color.Red, SymbolType.None);
 
@@ -230,6 +236,37 @@ namespace RNUT
 
             zGraph.AxisChange();
             zGraph.Invalidate();
+        }
+        public void plot_star(ZedGraphControl zGraph)
+        {
+            
+            PointPairList u = new PointPairList();
+            PointPairList v = new PointPairList();
+            for (int i = 0; i < n + 1; i++)
+            {              
+                u.Add(points[i], star_u1[i]);
+                v.Add(points[i], star_u2[i]);
+            }
+            LineItem i1 = zGraph.GraphPane.AddCurve("u1(0) - активатор", u, System.Drawing.Color.DarkGreen, SymbolType.None);
+            i1.Line.Style = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            i1.Line.IsSmooth = true;
+
+            LineItem i2 = zGraph.GraphPane.AddCurve("u2(0) - ингибитор", v, System.Drawing.Color.DarkRed, SymbolType.None);
+            i2.Line.Style = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            i2.Line.IsSmooth = true;
+    
+            zGraph.AxisChange();
+            zGraph.Invalidate();
+        }
+        public void Show_tablU1()
+        {
+            Tabl tmp = new Tabl(n, u1_list[step], "u1(x)");
+            tmp.Show();
+        }
+        public void Show_tablU2()
+        {
+            Tabl tmp = new Tabl(n, u2_list[step], "u2(x)");
+            tmp.Show();
         }
     }
 }
