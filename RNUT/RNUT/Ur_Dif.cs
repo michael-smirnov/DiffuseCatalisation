@@ -16,8 +16,6 @@ namespace RNUT
         int n;
         int step = 0;
         ulong layerNum = 0;
-        int u1_x_0;
-        int u2_x_0;
         double[] points;
         double cos(double x, int num_fun)
         {

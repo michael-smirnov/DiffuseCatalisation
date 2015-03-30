@@ -88,6 +88,7 @@
             this.LB_Step = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.CB_STAT_SOL = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -116,7 +117,6 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.CB_STAT_SOL = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_n)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Tick)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_mem_step)).BeginInit();
@@ -877,8 +877,18 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(281, 288);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "  ";
+            this.tabPage1.Text = "Одиночный эксперимент";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // CB_STAT_SOL
+            // 
+            this.CB_STAT_SOL.AutoSize = true;
+            this.CB_STAT_SOL.Location = new System.Drawing.Point(6, 194);
+            this.CB_STAT_SOL.Name = "CB_STAT_SOL";
+            this.CB_STAT_SOL.Size = new System.Drawing.Size(197, 17);
+            this.CB_STAT_SOL.TabIndex = 62;
+            this.CB_STAT_SOL.Text = "Выводить стационарное решение";
+            this.CB_STAT_SOL.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -1236,16 +1246,6 @@
             this.groupBox1.TabIndex = 67;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Информация о эксперименте";
-            // 
-            // CB_STAT_SOL
-            // 
-            this.CB_STAT_SOL.AutoSize = true;
-            this.CB_STAT_SOL.Location = new System.Drawing.Point(6, 194);
-            this.CB_STAT_SOL.Name = "CB_STAT_SOL";
-            this.CB_STAT_SOL.Size = new System.Drawing.Size(197, 17);
-            this.CB_STAT_SOL.TabIndex = 62;
-            this.CB_STAT_SOL.Text = "Выводить стационарное решение";
-            this.CB_STAT_SOL.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
