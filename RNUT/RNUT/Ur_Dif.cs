@@ -18,8 +18,6 @@ namespace RNUT
         int n;
         int step = 0;
         ulong layerNum = 0;
-        int u1_x_0;
-        int u2_x_0;
         double[] points;
         double cos(double x, int num_fun)
         {
@@ -102,6 +100,10 @@ namespace RNUT
             }
             set_u();
         }
+        public int get_n()
+        {
+            return n;
+        }
         public ulong get_layerNum()
         {
             return layerNum;
@@ -159,7 +161,44 @@ namespace RNUT
             step++;
             layerNum += Convert.ToUInt64(m);
         }
-        public void plot(ZedGraphControl zGraph, System.Windows.Forms.Label LB_norm1, System.Windows.Forms.Label LB_norm2)
+
+        public bool isDivirge()
+        {
+            bool result = false;
+            double maxLymbd = lymb1;
+            if (lymb2 > maxLymbd) maxLymbd = lymb2;
+
+            if (t > h * h / (2.0 * maxLymbd))
+                result = true;
+
+            return result;
+        }
+
+        public double[] CurrentU1
+        {
+            get
+            {
+                return u1_list[step];
+            }
+        }
+
+        public double[] CurrentU2
+        {
+            get
+            {
+                return u2_list[step];
+            }
+        }
+
+        public double[] Points
+        {
+            get
+            {
+                return points;
+            }
+        }
+
+        public void plot(ZedGraphControl zGraph, System.Windows.Forms.Label LB_norm1, System.Windows.Forms.Label LB_norm2, bool visibleStatSolution)
         {
             zGraph.GraphPane.CurveList.Clear();
             Double max_1 = 0, max_2 = 0;
@@ -176,6 +215,25 @@ namespace RNUT
             LB_norm2.Text = "Норма u2 = " + max_2.ToString();
             zGraph.GraphPane.AddCurve("u1(x) - активатор", u, System.Drawing.Color.Green, SymbolType.None);
             zGraph.GraphPane.AddCurve("u2(x) - ингибитор", v, System.Drawing.Color.Red, SymbolType.None);
+
+            if (visibleStatSolution)
+            {
+                double u1Stat = (this.k * this.v / this.c + this.p) / this.y;
+                double u2Stat = u1Stat * u1Stat * this.c / this.v;
+
+                PointPairList uStat = new PointPairList();
+                PointPairList vStat = new PointPairList();
+                for (int i = 0; i < n + 1; i++)
+                {
+                    uStat.Add(points[i], u1Stat);
+                    vStat.Add(points[i], u2Stat);
+                }
+                var u1Curve = zGraph.GraphPane.AddCurve("u1* - стац. решение для активатора", uStat, System.Drawing.Color.Green, SymbolType.None);
+                u1Curve.Line.Style = System.Drawing.Drawing2D.DashStyle.Dash;
+                var u2Curve = zGraph.GraphPane.AddCurve("u2* - стац. решение для ингибитора", vStat, System.Drawing.Color.Red, SymbolType.None);
+                u2Curve.Line.Style = System.Drawing.Drawing2D.DashStyle.Dash;
+            }
+
             zGraph.AxisChange();
             zGraph.Invalidate();
         }

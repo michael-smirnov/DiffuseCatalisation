@@ -88,19 +88,44 @@
             this.LB_Step = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.BT_tablU2 = new System.Windows.Forms.Button();
+            this.CB_nu = new System.Windows.Forms.CheckBox();
             this.BT_tablU1 = new System.Windows.Forms.Button();
+            this.CB_STAT_SOL = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbRaznNormIng = new System.Windows.Forms.Label();
+            this.lbRaznNormAct = new System.Windows.Forms.Label();
+            this.chbRazn = new System.Windows.Forms.CheckBox();
+            this.chbSecond = new System.Windows.Forms.CheckBox();
+            this.chbFirst = new System.Windows.Forms.CheckBox();
+            this.cbNU1 = new System.Windows.Forms.ComboBox();
+            this.cbNU2 = new System.Windows.Forms.ComboBox();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.btnSolve = new System.Windows.Forms.Button();
+            this.btnContinue = new System.Windows.Forms.Button();
+            this.deleteNU = new System.Windows.Forms.Button();
+            this.addNU = new System.Windows.Forms.Button();
+            this.listNU = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbNumFunc = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.numNU2 = new System.Windows.Forms.NumericUpDown();
+            this.numNU3 = new System.Windows.Forms.NumericUpDown();
+            this.tbNU2_5 = new System.Windows.Forms.TextBox();
+            this.numNU4 = new System.Windows.Forms.NumericUpDown();
+            this.tbNU1_5 = new System.Windows.Forms.TextBox();
+            this.numNU5 = new System.Windows.Forms.NumericUpDown();
+            this.tbNU2_4 = new System.Windows.Forms.TextBox();
+            this.numNU1 = new System.Windows.Forms.NumericUpDown();
+            this.tbNU1_4 = new System.Windows.Forms.TextBox();
+            this.tbNU1_1 = new System.Windows.Forms.TextBox();
+            this.tbNU2_3 = new System.Windows.Forms.TextBox();
+            this.tbNU2_1 = new System.Windows.Forms.TextBox();
+            this.tbNU1_3 = new System.Windows.Forms.TextBox();
+            this.tbNU1_2 = new System.Windows.Forms.TextBox();
+            this.tbNU2_2 = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -119,8 +144,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.LB_norm_u2 = new System.Windows.Forms.Label();
             this.LB_norm_u1 = new System.Windows.Forms.Label();
-            this.CB_nu = new System.Windows.Forms.CheckBox();
-            this.BT_tablU2 = new System.Windows.Forms.Button();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.NUD_n)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Tick)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_mem_step)).BeginInit();
@@ -138,6 +162,11 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numNU2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNU3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNU4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNU5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNU1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -162,7 +191,7 @@
             this.TB_k.Name = "TB_k";
             this.TB_k.Size = new System.Drawing.Size(83, 20);
             this.TB_k.TabIndex = 1;
-            this.TB_k.Text = "1";
+            this.TB_k.Text = "3";
             // 
             // TB_y
             // 
@@ -171,7 +200,7 @@
             this.TB_y.Name = "TB_y";
             this.TB_y.Size = new System.Drawing.Size(83, 20);
             this.TB_y.TabIndex = 2;
-            this.TB_y.Text = "1";
+            this.TB_y.Text = "2";
             // 
             // TB_v
             // 
@@ -198,7 +227,7 @@
             this.TB_lymb1.Name = "TB_lymb1";
             this.TB_lymb1.Size = new System.Drawing.Size(83, 20);
             this.TB_lymb1.TabIndex = 5;
-            this.TB_lymb1.Text = "1";
+            this.TB_lymb1.Text = "0,01125";
             // 
             // TB_lymb2
             // 
@@ -207,7 +236,7 @@
             this.TB_lymb2.Name = "TB_lymb2";
             this.TB_lymb2.Size = new System.Drawing.Size(83, 20);
             this.TB_lymb2.TabIndex = 6;
-            this.TB_lymb2.Text = "1";
+            this.TB_lymb2.Text = "0,28948";
             // 
             // TB_t
             // 
@@ -378,9 +407,9 @@
             // 
             // zedGraphControl1
             // 
-            this.zedGraphControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.zedGraphControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.zedGraphControl1.Location = new System.Drawing.Point(12, 12);
             this.zedGraphControl1.Name = "zedGraphControl1";
             this.zedGraphControl1.ScrollGrace = 0D;
@@ -757,7 +786,7 @@
             this.GB_eqParameters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.GB_eqParameters.Location = new System.Drawing.Point(671, 12);
             this.GB_eqParameters.Name = "GB_eqParameters";
-            this.GB_eqParameters.Size = new System.Drawing.Size(285, 208);
+            this.GB_eqParameters.Size = new System.Drawing.Size(295, 208);
             this.GB_eqParameters.TabIndex = 60;
             this.GB_eqParameters.TabStop = false;
             this.GB_eqParameters.Text = "Параметры системы уравнений";
@@ -859,8 +888,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(671, 226);
@@ -874,6 +903,7 @@
             this.tabPage1.Controls.Add(this.BT_tablU2);
             this.tabPage1.Controls.Add(this.CB_nu);
             this.tabPage1.Controls.Add(this.BT_tablU1);
+            this.tabPage1.Controls.Add(this.CB_STAT_SOL);
             this.tabPage1.Controls.Add(this.BT_Stop);
             this.tabPage1.Controls.Add(this.GB_GU);
             this.tabPage1.Controls.Add(this.BT_GO);
@@ -886,6 +916,28 @@
             this.tabPage1.Text = "Одиночный эксперимент";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // BT_tablU2
+            // 
+            this.BT_tablU2.Enabled = false;
+            this.BT_tablU2.Location = new System.Drawing.Point(141, 184);
+            this.BT_tablU2.Name = "BT_tablU2";
+            this.BT_tablU2.Size = new System.Drawing.Size(132, 36);
+            this.BT_tablU2.TabIndex = 69;
+            this.BT_tablU2.Text = "Показать таблицу u2(x)";
+            this.BT_tablU2.UseVisualStyleBackColor = true;
+            this.BT_tablU2.Click += new System.EventHandler(this.BT_tablU2_Click);
+            // 
+            // CB_nu
+            // 
+            this.CB_nu.AutoSize = true;
+            this.CB_nu.Location = new System.Drawing.Point(6, 226);
+            this.CB_nu.Name = "CB_nu";
+            this.CB_nu.Size = new System.Drawing.Size(177, 17);
+            this.CB_nu.TabIndex = 68;
+            this.CB_nu.Text = "Показать начальные условия";
+            this.CB_nu.UseVisualStyleBackColor = true;
+            this.CB_nu.CheckedChanged += new System.EventHandler(this.CB_nu_CheckedChanged);
+            // 
             // BT_tablU1
             // 
             this.BT_tablU1.Enabled = false;
@@ -897,102 +949,190 @@
             this.BT_tablU1.UseVisualStyleBackColor = true;
             this.BT_tablU1.Click += new System.EventHandler(this.BT_tabl_Click);
             // 
+            // CB_STAT_SOL
+            // 
+            this.CB_STAT_SOL.AutoSize = true;
+            this.CB_STAT_SOL.Location = new System.Drawing.Point(5, 245);
+            this.CB_STAT_SOL.Name = "CB_STAT_SOL";
+            this.CB_STAT_SOL.Size = new System.Drawing.Size(198, 17);
+            this.CB_STAT_SOL.TabIndex = 62;
+            this.CB_STAT_SOL.Text = "Показать стационарные решения";
+            this.CB_STAT_SOL.UseVisualStyleBackColor = true;
+            // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.listBox1);
+            this.tabPage2.AutoScroll = true;
+            this.tabPage2.Controls.Add(this.lbRaznNormIng);
+            this.tabPage2.Controls.Add(this.lbRaznNormAct);
+            this.tabPage2.Controls.Add(this.chbRazn);
+            this.tabPage2.Controls.Add(this.chbSecond);
+            this.tabPage2.Controls.Add(this.chbFirst);
+            this.tabPage2.Controls.Add(this.cbNU1);
+            this.tabPage2.Controls.Add(this.cbNU2);
+            this.tabPage2.Controls.Add(this.btnPause);
+            this.tabPage2.Controls.Add(this.btnSolve);
+            this.tabPage2.Controls.Add(this.btnContinue);
+            this.tabPage2.Controls.Add(this.deleteNU);
+            this.tabPage2.Controls.Add(this.addNU);
+            this.tabPage2.Controls.Add(this.listNU);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(281, 260);
+            this.tabPage2.Size = new System.Drawing.Size(281, 262);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Сравнение решений";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // lbRaznNormIng
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.Location = new System.Drawing.Point(97, 245);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 36);
-            this.button3.TabIndex = 67;
-            this.button3.Text = "Пауза";
-            this.button3.UseVisualStyleBackColor = true;
+            this.lbRaznNormIng.AutoSize = true;
+            this.lbRaznNormIng.Location = new System.Drawing.Point(149, 387);
+            this.lbRaznNormIng.Name = "lbRaznNormIng";
+            this.lbRaznNormIng.Size = new System.Drawing.Size(123, 13);
+            this.lbRaznNormIng.TabIndex = 75;
+            this.lbRaznNormIng.Text = "||u2-v2|| = Not calculated";
             // 
-            // button4
+            // lbRaznNormAct
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button4.Location = new System.Drawing.Point(6, 245);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 36);
-            this.button4.TabIndex = 66;
-            this.button4.Text = "Решать сначала";
-            this.button4.UseVisualStyleBackColor = true;
+            this.lbRaznNormAct.AutoSize = true;
+            this.lbRaznNormAct.Location = new System.Drawing.Point(149, 365);
+            this.lbRaznNormAct.Name = "lbRaznNormAct";
+            this.lbRaznNormAct.Size = new System.Drawing.Size(123, 13);
+            this.lbRaznNormAct.TabIndex = 74;
+            this.lbRaznNormAct.Text = "||u1-v1|| = Not calculated";
             // 
-            // button5
+            // chbRazn
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.Location = new System.Drawing.Point(188, 245);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 36);
-            this.button5.TabIndex = 68;
-            this.button5.Text = "Продолжить";
-            this.button5.UseVisualStyleBackColor = true;
+            this.chbRazn.AutoSize = true;
+            this.chbRazn.Location = new System.Drawing.Point(6, 410);
+            this.chbRazn.Name = "chbRazn";
+            this.chbRazn.Size = new System.Drawing.Size(119, 17);
+            this.chbRazn.TabIndex = 73;
+            this.chbRazn.Text = "Показать разницу";
+            this.chbRazn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // chbSecond
             // 
-            this.button2.Location = new System.Drawing.Point(105, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 35);
-            this.button2.TabIndex = 65;
-            this.button2.Text = "Удалить НУ...";
-            this.button2.UseVisualStyleBackColor = true;
+            this.chbSecond.AutoSize = true;
+            this.chbSecond.Checked = true;
+            this.chbSecond.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbSecond.Location = new System.Drawing.Point(6, 387);
+            this.chbSecond.Name = "chbSecond";
+            this.chbSecond.Size = new System.Drawing.Size(140, 17);
+            this.chbSecond.TabIndex = 72;
+            this.chbSecond.Text = "Показать 2-е решение";
+            this.chbSecond.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // chbFirst
             // 
-            this.button1.Location = new System.Drawing.Point(5, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 35);
-            this.button1.TabIndex = 64;
-            this.button1.Text = "Добавить НУ...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.chbFirst.AutoSize = true;
+            this.chbFirst.Checked = true;
+            this.chbFirst.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbFirst.Location = new System.Drawing.Point(6, 364);
+            this.chbFirst.Name = "chbFirst";
+            this.chbFirst.Size = new System.Drawing.Size(140, 17);
+            this.chbFirst.TabIndex = 71;
+            this.chbFirst.Text = "Показать 1-е решение";
+            this.chbFirst.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // cbNU1
             // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(6, 183);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(267, 56);
-            this.listBox1.TabIndex = 63;
+            this.cbNU1.FormattingEnabled = true;
+            this.cbNU1.Location = new System.Drawing.Point(6, 310);
+            this.cbNU1.Name = "cbNU1";
+            this.cbNU1.Size = new System.Drawing.Size(267, 21);
+            this.cbNU1.TabIndex = 70;
+            // 
+            // cbNU2
+            // 
+            this.cbNU2.FormattingEnabled = true;
+            this.cbNU2.Location = new System.Drawing.Point(6, 337);
+            this.cbNU2.Name = "cbNU2";
+            this.cbNU2.Size = new System.Drawing.Size(267, 21);
+            this.cbNU2.TabIndex = 69;
+            // 
+            // btnPause
+            // 
+            this.btnPause.Location = new System.Drawing.Point(96, 435);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(85, 36);
+            this.btnPause.TabIndex = 67;
+            this.btnPause.Text = "Пауза";
+            this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
+            // 
+            // btnSolve
+            // 
+            this.btnSolve.Location = new System.Drawing.Point(5, 435);
+            this.btnSolve.Name = "btnSolve";
+            this.btnSolve.Size = new System.Drawing.Size(85, 36);
+            this.btnSolve.TabIndex = 66;
+            this.btnSolve.Text = "Решать сначала";
+            this.btnSolve.UseVisualStyleBackColor = true;
+            this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
+            // 
+            // btnContinue
+            // 
+            this.btnContinue.Location = new System.Drawing.Point(187, 435);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(85, 36);
+            this.btnContinue.TabIndex = 68;
+            this.btnContinue.Text = "Продолжить";
+            this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
+            // 
+            // deleteNU
+            // 
+            this.deleteNU.Enabled = false;
+            this.deleteNU.Location = new System.Drawing.Point(105, 142);
+            this.deleteNU.Name = "deleteNU";
+            this.deleteNU.Size = new System.Drawing.Size(94, 35);
+            this.deleteNU.TabIndex = 65;
+            this.deleteNU.Text = "Удалить НУ...";
+            this.deleteNU.UseVisualStyleBackColor = true;
+            this.deleteNU.Click += new System.EventHandler(this.deleteNU_Click);
+            // 
+            // addNU
+            // 
+            this.addNU.Location = new System.Drawing.Point(5, 142);
+            this.addNU.Name = "addNU";
+            this.addNU.Size = new System.Drawing.Size(94, 35);
+            this.addNU.TabIndex = 64;
+            this.addNU.Text = "Добавить НУ...";
+            this.addNU.UseVisualStyleBackColor = true;
+            this.addNU.Click += new System.EventHandler(this.addNU_Click);
+            // 
+            // listNU
+            // 
+            this.listNU.FormattingEnabled = true;
+            this.listNU.Location = new System.Drawing.Point(6, 183);
+            this.listNU.Name = "listNU";
+            this.listNU.Size = new System.Drawing.Size(267, 121);
+            this.listNU.TabIndex = 63;
+            this.listNU.SelectedIndexChanged += new System.EventHandler(this.listNU_SelectedIndexChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cbNumFunc);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.numericUpDown1);
-            this.groupBox2.Controls.Add(this.numericUpDown2);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.numericUpDown3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.numericUpDown4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.numericUpDown5);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox10);
+            this.groupBox2.Controls.Add(this.numNU2);
+            this.groupBox2.Controls.Add(this.numNU3);
+            this.groupBox2.Controls.Add(this.tbNU2_5);
+            this.groupBox2.Controls.Add(this.numNU4);
+            this.groupBox2.Controls.Add(this.tbNU1_5);
+            this.groupBox2.Controls.Add(this.numNU5);
+            this.groupBox2.Controls.Add(this.tbNU2_4);
+            this.groupBox2.Controls.Add(this.numNU1);
+            this.groupBox2.Controls.Add(this.tbNU1_4);
+            this.groupBox2.Controls.Add(this.tbNU1_1);
+            this.groupBox2.Controls.Add(this.tbNU2_3);
+            this.groupBox2.Controls.Add(this.tbNU2_1);
+            this.groupBox2.Controls.Add(this.tbNU1_3);
+            this.groupBox2.Controls.Add(this.tbNU1_2);
+            this.groupBox2.Controls.Add(this.tbNU2_2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
@@ -1011,20 +1151,21 @@
             this.label2.TabIndex = 60;
             this.label2.Text = "Количество собственных функций:";
             // 
-            // comboBox1
+            // cbNumFunc
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbNumFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbNumFunc.FormattingEnabled = true;
+            this.cbNumFunc.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5"});
-            this.comboBox1.Location = new System.Drawing.Point(198, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(35, 21);
-            this.comboBox1.TabIndex = 59;
+            this.cbNumFunc.Location = new System.Drawing.Point(198, 20);
+            this.cbNumFunc.Name = "cbNumFunc";
+            this.cbNumFunc.Size = new System.Drawing.Size(35, 21);
+            this.cbNumFunc.TabIndex = 59;
+            this.cbNumFunc.SelectedIndexChanged += new System.EventHandler(this.cbNumFunc_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -1046,134 +1187,257 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "u2(x,0)";
             // 
-            // numericUpDown1
+            // numNU2
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDown1.Location = new System.Drawing.Point(103, 48);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            17,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown1.TabIndex = 44;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDown2.Location = new System.Drawing.Point(144, 48);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            18,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown2.TabIndex = 45;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(227, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(33, 20);
-            this.textBox1.TabIndex = 58;
-            this.textBox1.Text = "0";
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDown3.Location = new System.Drawing.Point(185, 48);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            19,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Minimum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown3.TabIndex = 46;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(227, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(33, 20);
-            this.textBox2.TabIndex = 57;
-            this.textBox2.Text = "0";
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDown4.Location = new System.Drawing.Point(225, 48);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
+            this.numNU2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numNU2.Location = new System.Drawing.Point(103, 48);
+            this.numNU2.Maximum = new decimal(new int[] {
             20,
             0,
             0,
             0});
-            this.numericUpDown4.Minimum = new decimal(new int[] {
+            this.numNU2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numNU2.Name = "numNU2";
+            this.numNU2.Size = new System.Drawing.Size(35, 20);
+            this.numNU2.TabIndex = 44;
+            this.numNU2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numNU2.ValueChanged += new System.EventHandler(this.numNU2_ValueChanged);
+            // 
+            // numNU3
+            // 
+            this.numNU3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numNU3.Location = new System.Drawing.Point(144, 48);
+            this.numNU3.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numNU3.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numNU3.Name = "numNU3";
+            this.numNU3.Size = new System.Drawing.Size(35, 20);
+            this.numNU3.TabIndex = 45;
+            this.numNU3.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.numNU3.ValueChanged += new System.EventHandler(this.numNU3_ValueChanged);
+            // 
+            // tbNU2_5
+            // 
+            this.tbNU2_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbNU2_5.Location = new System.Drawing.Point(227, 100);
+            this.tbNU2_5.Name = "tbNU2_5";
+            this.tbNU2_5.Size = new System.Drawing.Size(33, 20);
+            this.tbNU2_5.TabIndex = 58;
+            this.tbNU2_5.Text = "0";
+            // 
+            // numNU4
+            // 
+            this.numNU4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numNU4.Location = new System.Drawing.Point(185, 48);
+            this.numNU4.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numNU4.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numNU4.Name = "numNU4";
+            this.numNU4.Size = new System.Drawing.Size(35, 20);
+            this.numNU4.TabIndex = 46;
+            this.numNU4.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numNU4.ValueChanged += new System.EventHandler(this.numNU4_ValueChanged);
+            // 
+            // tbNU1_5
+            // 
+            this.tbNU1_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbNU1_5.Location = new System.Drawing.Point(227, 74);
+            this.tbNU1_5.Name = "tbNU1_5";
+            this.tbNU1_5.Size = new System.Drawing.Size(33, 20);
+            this.tbNU1_5.TabIndex = 57;
+            this.tbNU1_5.Text = "0";
+            // 
+            // numNU5
+            // 
+            this.numNU5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numNU5.Location = new System.Drawing.Point(225, 48);
+            this.numNU5.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numNU5.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numNU5.Name = "numNU5";
+            this.numNU5.Size = new System.Drawing.Size(35, 20);
+            this.numNU5.TabIndex = 47;
+            this.numNU5.Value = new decimal(new int[] {
             4,
             0,
             0,
             0});
+            this.numNU5.ValueChanged += new System.EventHandler(this.numNU5_ValueChanged);
+            // 
+            // tbNU2_4
+            // 
+            this.tbNU2_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbNU2_4.Location = new System.Drawing.Point(187, 100);
+            this.tbNU2_4.Name = "tbNU2_4";
+            this.tbNU2_4.Size = new System.Drawing.Size(33, 20);
+            this.tbNU2_4.TabIndex = 56;
+            this.tbNU2_4.Text = "0";
+            // 
+            // numNU1
+            // 
+            this.numNU1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numNU1.Location = new System.Drawing.Point(62, 48);
+            this.numNU1.Maximum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.numNU1.Name = "numNU1";
+            this.numNU1.Size = new System.Drawing.Size(35, 20);
+            this.numNU1.TabIndex = 48;
+            // 
+            // tbNU1_4
+            // 
+            this.tbNU1_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbNU1_4.Location = new System.Drawing.Point(187, 74);
+            this.tbNU1_4.Name = "tbNU1_4";
+            this.tbNU1_4.Size = new System.Drawing.Size(33, 20);
+            this.tbNU1_4.TabIndex = 55;
+            this.tbNU1_4.Text = "0";
+            // 
+            // tbNU1_1
+            // 
+            this.tbNU1_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbNU1_1.Location = new System.Drawing.Point(62, 74);
+            this.tbNU1_1.Name = "tbNU1_1";
+            this.tbNU1_1.Size = new System.Drawing.Size(33, 20);
+            this.tbNU1_1.TabIndex = 49;
+            this.tbNU1_1.Text = "1";
+            // 
+            // tbNU2_3
+            // 
+            this.tbNU2_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbNU2_3.Location = new System.Drawing.Point(146, 100);
+            this.tbNU2_3.Name = "tbNU2_3";
+            this.tbNU2_3.Size = new System.Drawing.Size(33, 20);
+            this.tbNU2_3.TabIndex = 54;
+            this.tbNU2_3.Text = "0";
+            // 
+            // tbNU2_1
+            // 
+            this.tbNU2_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbNU2_1.Location = new System.Drawing.Point(62, 100);
+            this.tbNU2_1.Name = "tbNU2_1";
+            this.tbNU2_1.Size = new System.Drawing.Size(33, 20);
+            this.tbNU2_1.TabIndex = 50;
+            this.tbNU2_1.Text = "1";
+            // 
+            // tbNU1_3
+            // 
+            this.tbNU1_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbNU1_3.Location = new System.Drawing.Point(146, 74);
+            this.tbNU1_3.Name = "tbNU1_3";
+            this.tbNU1_3.Size = new System.Drawing.Size(33, 20);
+            this.tbNU1_3.TabIndex = 53;
+            this.tbNU1_3.Text = "0";
+            // 
+            // tbNU1_2
+            // 
+            this.tbNU1_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbNU1_2.Location = new System.Drawing.Point(103, 74);
+            this.tbNU1_2.Name = "tbNU1_2";
+            this.tbNU1_2.Size = new System.Drawing.Size(33, 20);
+            this.tbNU1_2.TabIndex = 51;
+            this.tbNU1_2.Text = "0";
+            // 
+            // tbNU2_2
+            // 
+            this.tbNU2_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbNU2_2.Location = new System.Drawing.Point(103, 100);
+            this.tbNU2_2.Name = "tbNU2_2";
+            this.tbNU2_2.Size = new System.Drawing.Size(33, 20);
+            this.tbNU2_2.TabIndex = 52;
+            this.tbNU2_2.Text = "0";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(0, 0);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 0;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(0, 0);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown2.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(0, 0);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown3.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 0;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(0, 0);
             this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown4.TabIndex = 47;
-            this.numericUpDown4.Value = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
+            this.numericUpDown4.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown4.TabIndex = 0;
             // 
             // textBox3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(187, 100);
+            this.textBox3.Location = new System.Drawing.Point(0, 0);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(33, 20);
-            this.textBox3.TabIndex = 56;
-            this.textBox3.Text = "0";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 0;
             // 
             // numericUpDown5
             // 
-            this.numericUpDown5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDown5.Location = new System.Drawing.Point(62, 48);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
+            this.numericUpDown5.Location = new System.Drawing.Point(0, 0);
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(35, 20);
             this.numericUpDown5.TabIndex = 48;
@@ -1278,27 +1542,9 @@
             this.LB_norm_u1.TabIndex = 66;
             this.LB_norm_u1.Text = "Норма u1 = 0";
             // 
-            // CB_nu
+            // timer2
             // 
-            this.CB_nu.AutoSize = true;
-            this.CB_nu.Location = new System.Drawing.Point(6, 226);
-            this.CB_nu.Name = "CB_nu";
-            this.CB_nu.Size = new System.Drawing.Size(177, 17);
-            this.CB_nu.TabIndex = 68;
-            this.CB_nu.Text = "Показать начальные условия";
-            this.CB_nu.UseVisualStyleBackColor = true;
-            this.CB_nu.CheckedChanged += new System.EventHandler(this.CB_nu_CheckedChanged);
-            // 
-            // BT_tablU2
-            // 
-            this.BT_tablU2.Enabled = false;
-            this.BT_tablU2.Location = new System.Drawing.Point(141, 184);
-            this.BT_tablU2.Name = "BT_tablU2";
-            this.BT_tablU2.Size = new System.Drawing.Size(132, 36);
-            this.BT_tablU2.TabIndex = 69;
-            this.BT_tablU2.Text = "Показать таблицу u2(x)";
-            this.BT_tablU2.UseVisualStyleBackColor = true;
-            this.BT_tablU2.Click += new System.EventHandler(this.BT_tablU2_Click);
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // MainForm
             // 
@@ -1336,8 +1582,14 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numNU2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNU3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNU4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNU5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNU1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
@@ -1412,15 +1664,15 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnPause;
+        private System.Windows.Forms.Button btnSolve;
+        private System.Windows.Forms.Button btnContinue;
+        private System.Windows.Forms.Button deleteNU;
+        private System.Windows.Forms.Button addNU;
+        private System.Windows.Forms.ListBox listNU;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbNumFunc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
@@ -1443,6 +1695,30 @@
         private System.Windows.Forms.CheckBox CB_nu;
         private System.Windows.Forms.Button BT_tablU1;
         private System.Windows.Forms.Button BT_tablU2;
+        private System.Windows.Forms.CheckBox CB_STAT_SOL;
+        private System.Windows.Forms.NumericUpDown numNU2;
+        private System.Windows.Forms.NumericUpDown numNU3;
+        private System.Windows.Forms.TextBox tbNU2_5;
+        private System.Windows.Forms.NumericUpDown numNU4;
+        private System.Windows.Forms.TextBox tbNU1_5;
+        private System.Windows.Forms.NumericUpDown numNU5;
+        private System.Windows.Forms.TextBox tbNU2_4;
+        private System.Windows.Forms.NumericUpDown numNU1;
+        private System.Windows.Forms.TextBox tbNU1_4;
+        private System.Windows.Forms.TextBox tbNU1_1;
+        private System.Windows.Forms.TextBox tbNU2_3;
+        private System.Windows.Forms.TextBox tbNU2_1;
+        private System.Windows.Forms.TextBox tbNU1_3;
+        private System.Windows.Forms.TextBox tbNU1_2;
+        private System.Windows.Forms.TextBox tbNU2_2;
+        private System.Windows.Forms.ComboBox cbNU1;
+        private System.Windows.Forms.ComboBox cbNU2;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label lbRaznNormAct;
+        private System.Windows.Forms.CheckBox chbRazn;
+        private System.Windows.Forms.CheckBox chbSecond;
+        private System.Windows.Forms.CheckBox chbFirst;
+        private System.Windows.Forms.Label lbRaznNormIng;
     }
 }
 
