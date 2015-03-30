@@ -98,6 +98,10 @@ namespace RNUT
             }
             set_u();
         }
+        public int get_n()
+        {
+            return n;
+        }
         public ulong get_layerNum()
         {
             return layerNum;
@@ -169,7 +173,31 @@ namespace RNUT
             return result;
         }
 
-        public void plot(ZedGraphControl zGraph, bool visibleStatSolution )
+        public double[] CurrentU1
+        {
+            get
+            {
+                return u1_list[step];
+            }
+        }
+
+        public double[] CurrentU2
+        {
+            get
+            {
+                return u2_list[step];
+            }
+        }
+
+        public double[] Points
+        {
+            get
+            {
+                return points;
+            }
+        }
+
+        public void plot(ZedGraphControl zGraph, bool visibleStatSolution)
         {
             zGraph.GraphPane.CurveList.Clear();
             PointPairList u = new PointPairList();
