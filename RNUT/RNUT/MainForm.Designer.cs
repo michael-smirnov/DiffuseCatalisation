@@ -89,48 +89,17 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-<<<<<<< HEAD
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-=======
             this.btnPause = new System.Windows.Forms.Button();
             this.btnSolve = new System.Windows.Forms.Button();
             this.btnContinue = new System.Windows.Forms.Button();
             this.deleteNU = new System.Windows.Forms.Button();
             this.addNU = new System.Windows.Forms.Button();
             this.listNU = new System.Windows.Forms.ListBox();
->>>>>>> origin/master
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbNumFunc = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.LB_norm_u1 = new System.Windows.Forms.Label();
-            this.LB_norm_u2 = new System.Windows.Forms.Label();
-            this.CB_nu = new System.Windows.Forms.CheckBox();
-            this.BT_tabl = new System.Windows.Forms.Button();
-=======
             this.numNU2 = new System.Windows.Forms.NumericUpDown();
             this.numNU3 = new System.Windows.Forms.NumericUpDown();
             this.tbNU2_5 = new System.Windows.Forms.TextBox();
@@ -155,7 +124,6 @@
             this.chbRazn = new System.Windows.Forms.CheckBox();
             this.lbRaznNormAct = new System.Windows.Forms.Label();
             this.lbRaznNormIng = new System.Windows.Forms.Label();
->>>>>>> origin/master
             ((System.ComponentModel.ISupportInitialize)(this.NUD_n)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Tick)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_mem_step)).BeginInit();
@@ -173,19 +141,11 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-=======
             ((System.ComponentModel.ISupportInitialize)(this.numNU2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNU3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNU4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNU5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNU1)).BeginInit();
->>>>>>> origin/master
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -433,11 +393,7 @@
             this.zedGraphControl1.ScrollMinX = 0D;
             this.zedGraphControl1.ScrollMinY = 0D;
             this.zedGraphControl1.ScrollMinY2 = 0D;
-<<<<<<< HEAD
-            this.zedGraphControl1.Size = new System.Drawing.Size(652, 500);
-=======
             this.zedGraphControl1.Size = new System.Drawing.Size(656, 717);
->>>>>>> origin/master
             this.zedGraphControl1.TabIndex = 30;
             // 
             // BT_Start
@@ -521,7 +477,7 @@
             this.LB_Time.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LB_Time.AutoSize = true;
             this.LB_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.LB_Time.Location = new System.Drawing.Point(6, 47);
+            this.LB_Time.Location = new System.Drawing.Point(6, 24);
             this.LB_Time.Name = "LB_Time";
             this.LB_Time.Size = new System.Drawing.Size(105, 13);
             this.LB_Time.TabIndex = 39;
@@ -802,11 +758,7 @@
             this.GB_eqParameters.Controls.Add(this.LB_c);
             this.GB_eqParameters.Controls.Add(this.LB_lymb2);
             this.GB_eqParameters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-<<<<<<< HEAD
-            this.GB_eqParameters.Location = new System.Drawing.Point(671, 12);
-=======
             this.GB_eqParameters.Location = new System.Drawing.Point(678, 12);
->>>>>>> origin/master
             this.GB_eqParameters.Name = "GB_eqParameters";
             this.GB_eqParameters.Size = new System.Drawing.Size(295, 208);
             this.GB_eqParameters.TabIndex = 60;
@@ -860,11 +812,7 @@
             this.GB_GRID.Controls.Add(this.NUD_n);
             this.GB_GRID.Controls.Add(this.TB_t);
             this.GB_GRID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-<<<<<<< HEAD
-            this.GB_GRID.Location = new System.Drawing.Point(513, 522);
-=======
             this.GB_GRID.Location = new System.Drawing.Point(513, 739);
->>>>>>> origin/master
             this.GB_GRID.Name = "GB_GRID";
             this.GB_GRID.Size = new System.Drawing.Size(273, 76);
             this.GB_GRID.TabIndex = 62;
@@ -879,11 +827,7 @@
             this.GB_ProgramParameters.Controls.Add(this.LB_Tick);
             this.GB_ProgramParameters.Controls.Add(this.NUD_mem_step);
             this.GB_ProgramParameters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-<<<<<<< HEAD
-            this.GB_ProgramParameters.Location = new System.Drawing.Point(255, 520);
-=======
             this.GB_ProgramParameters.Location = new System.Drawing.Point(255, 737);
->>>>>>> origin/master
             this.GB_ProgramParameters.Name = "GB_ProgramParameters";
             this.GB_ProgramParameters.Size = new System.Drawing.Size(252, 78);
             this.GB_ProgramParameters.TabIndex = 63;
@@ -898,11 +842,7 @@
             this.GB_GraphParameters.Controls.Add(this.LB_Y_max);
             this.GB_GraphParameters.Controls.Add(this.TB_max_Y);
             this.GB_GraphParameters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-<<<<<<< HEAD
-            this.GB_GraphParameters.Location = new System.Drawing.Point(792, 520);
-=======
             this.GB_GraphParameters.Location = new System.Drawing.Point(792, 737);
->>>>>>> origin/master
             this.GB_GraphParameters.Name = "GB_GraphParameters";
             this.GB_GraphParameters.Size = new System.Drawing.Size(171, 78);
             this.GB_GraphParameters.TabIndex = 64;
@@ -914,7 +854,7 @@
             this.LB_Step.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LB_Step.AutoSize = true;
             this.LB_Step.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.LB_Step.Location = new System.Drawing.Point(6, 60);
+            this.LB_Step.Location = new System.Drawing.Point(6, 47);
             this.LB_Step.Name = "LB_Step";
             this.LB_Step.Size = new System.Drawing.Size(50, 13);
             this.LB_Step.TabIndex = 65;
@@ -926,22 +866,14 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-<<<<<<< HEAD
-            this.tabControl1.Location = new System.Drawing.Point(671, 226);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(289, 286);
-=======
             this.tabControl1.Location = new System.Drawing.Point(674, 226);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(303, 503);
->>>>>>> origin/master
             this.tabControl1.TabIndex = 66;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.BT_tabl);
             this.tabPage1.Controls.Add(this.BT_Stop);
             this.tabPage1.Controls.Add(this.GB_GU);
             this.tabPage1.Controls.Add(this.BT_GO);
@@ -949,11 +881,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-<<<<<<< HEAD
-            this.tabPage1.Size = new System.Drawing.Size(281, 260);
-=======
             this.tabPage1.Size = new System.Drawing.Size(295, 187);
->>>>>>> origin/master
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Одиночный эксперимент";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -983,65 +911,6 @@
             this.tabPage2.Text = "Сравнение решений";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-<<<<<<< HEAD
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.Location = new System.Drawing.Point(97, 245);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 36);
-            this.button3.TabIndex = 67;
-            this.button3.Text = "Пауза";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button4.Location = new System.Drawing.Point(6, 245);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 36);
-            this.button4.TabIndex = 66;
-            this.button4.Text = "Решать сначала";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.Location = new System.Drawing.Point(188, 245);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 36);
-            this.button5.TabIndex = 68;
-            this.button5.Text = "Продолжить";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(105, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 35);
-            this.button2.TabIndex = 65;
-            this.button2.Text = "Удалить НУ...";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(5, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 35);
-            this.button1.TabIndex = 64;
-            this.button1.Text = "Добавить НУ...";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(6, 183);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(267, 56);
-            this.listBox1.TabIndex = 63;
-=======
             // btnPause
             // 
             this.btnPause.Location = new System.Drawing.Point(96, 435);
@@ -1101,7 +970,6 @@
             this.listNU.Size = new System.Drawing.Size(267, 121);
             this.listNU.TabIndex = 63;
             this.listNU.SelectedIndexChanged += new System.EventHandler(this.listNU_SelectedIndexChanged);
->>>>>>> origin/master
             // 
             // groupBox2
             // 
@@ -1310,74 +1178,6 @@
             0,
             0,
             0});
-<<<<<<< HEAD
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown5.TabIndex = 48;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(187, 74);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(33, 20);
-            this.textBox4.TabIndex = 55;
-            this.textBox4.Text = "0";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(62, 74);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(33, 20);
-            this.textBox5.TabIndex = 49;
-            this.textBox5.Text = "1";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(146, 100);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(33, 20);
-            this.textBox6.TabIndex = 54;
-            this.textBox6.Text = "0";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox7.Location = new System.Drawing.Point(62, 100);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(33, 20);
-            this.textBox7.TabIndex = 50;
-            this.textBox7.Text = "1";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox8.Location = new System.Drawing.Point(146, 74);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(33, 20);
-            this.textBox8.TabIndex = 53;
-            this.textBox8.Text = "0";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox9.Location = new System.Drawing.Point(103, 74);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(33, 20);
-            this.textBox9.TabIndex = 51;
-            this.textBox9.Text = "0";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox10.Location = new System.Drawing.Point(103, 100);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(33, 20);
-            this.textBox10.TabIndex = 52;
-            this.textBox10.Text = "0";
-=======
             this.numNU1.Name = "numNU1";
             this.numNU1.Size = new System.Drawing.Size(35, 20);
             this.numNU1.TabIndex = 48;
@@ -1444,77 +1244,20 @@
             this.tbNU2_2.Size = new System.Drawing.Size(33, 20);
             this.tbNU2_2.TabIndex = 52;
             this.tbNU2_2.Text = "0";
->>>>>>> origin/master
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-<<<<<<< HEAD
-            this.groupBox1.Controls.Add(this.LB_norm_u2);
-            this.groupBox1.Controls.Add(this.LB_norm_u1);
-            this.groupBox1.Controls.Add(this.LB_Time);
-            this.groupBox1.Controls.Add(this.LB_Step);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 520);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(237, 78);
-=======
             this.groupBox1.Controls.Add(this.LB_Time);
             this.groupBox1.Controls.Add(this.LB_Step);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.groupBox1.Location = new System.Drawing.Point(12, 737);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(237, 76);
->>>>>>> origin/master
             this.groupBox1.TabIndex = 67;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Информация о эксперименте";
             // 
-<<<<<<< HEAD
-            // LB_norm_u1
-            // 
-            this.LB_norm_u1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LB_norm_u1.AutoSize = true;
-            this.LB_norm_u1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.LB_norm_u1.Location = new System.Drawing.Point(6, 18);
-            this.LB_norm_u1.Name = "LB_norm_u1";
-            this.LB_norm_u1.Size = new System.Drawing.Size(74, 13);
-            this.LB_norm_u1.TabIndex = 66;
-            this.LB_norm_u1.Text = "Норма u1 = 0";
-            // 
-            // LB_norm_u2
-            // 
-            this.LB_norm_u2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LB_norm_u2.AutoSize = true;
-            this.LB_norm_u2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.LB_norm_u2.Location = new System.Drawing.Point(6, 34);
-            this.LB_norm_u2.Name = "LB_norm_u2";
-            this.LB_norm_u2.Size = new System.Drawing.Size(74, 13);
-            this.LB_norm_u2.TabIndex = 67;
-            this.LB_norm_u2.Text = "Норма u2 = 0";
-            // 
-            // CB_nu
-            // 
-            this.CB_nu.AutoSize = true;
-            this.CB_nu.Location = new System.Drawing.Point(377, 0);
-            this.CB_nu.Name = "CB_nu";
-            this.CB_nu.Size = new System.Drawing.Size(94, 17);
-            this.CB_nu.TabIndex = 68;
-            this.CB_nu.Text = "Показать НУ";
-            this.CB_nu.UseVisualStyleBackColor = true;
-            this.CB_nu.CheckedChanged += new System.EventHandler(this.CB_nu_CheckedChanged);
-            // 
-            // BT_tabl
-            // 
-            this.BT_tabl.Enabled = false;
-            this.BT_tabl.Location = new System.Drawing.Point(6, 184);
-            this.BT_tabl.Name = "BT_tabl";
-            this.BT_tabl.Size = new System.Drawing.Size(85, 36);
-            this.BT_tabl.TabIndex = 62;
-            this.BT_tabl.Text = "Показать таблицу";
-            this.BT_tabl.UseVisualStyleBackColor = true;
-            this.BT_tabl.Click += new System.EventHandler(this.BT_tabl_Click);
-=======
             // cbNU2
             // 
             this.cbNU2.FormattingEnabled = true;
@@ -1586,18 +1329,12 @@
             this.lbRaznNormIng.Size = new System.Drawing.Size(123, 13);
             this.lbRaznNormIng.TabIndex = 75;
             this.lbRaznNormIng.Text = "||u2-v2|| = Not calculated";
->>>>>>> origin/master
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(967, 608);
-            this.Controls.Add(this.CB_nu);
-=======
             this.ClientSize = new System.Drawing.Size(984, 825);
->>>>>>> origin/master
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.GB_GraphParameters);
             this.Controls.Add(this.GB_eqParameters);
@@ -1628,15 +1365,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-<<<<<<< HEAD
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-=======
             this.tabPage2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1645,11 +1373,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numNU4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNU5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNU1)).EndInit();
->>>>>>> origin/master
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1727,27 +1453,6 @@
         private System.Windows.Forms.ComboBox cbNumFunc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-<<<<<<< HEAD
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label LB_norm_u2;
-        private System.Windows.Forms.Label LB_norm_u1;
-        private System.Windows.Forms.CheckBox CB_nu;
-        private System.Windows.Forms.Button BT_tabl;
-=======
         private System.Windows.Forms.NumericUpDown numNU2;
         private System.Windows.Forms.NumericUpDown numNU3;
         private System.Windows.Forms.TextBox tbNU2_5;
@@ -1771,7 +1476,6 @@
         private System.Windows.Forms.CheckBox chbSecond;
         private System.Windows.Forms.CheckBox chbFirst;
         private System.Windows.Forms.Label lbRaznNormIng;
->>>>>>> origin/master
     }
 }
 
