@@ -13,6 +13,7 @@ namespace RNUT
     public partial class MainForm : Form
     {
         Ur_Dif dif;
+        bool is_visible_nu;
         double t, time;
         public MainForm()
         {
@@ -25,6 +26,7 @@ namespace RNUT
             zedGraphControl1.GraphPane.YAxis.Scale.Min = Convert.ToDouble(TB_min_Y.Text);
             zedGraphControl1.GraphPane.YAxis.Scale.Max = Convert.ToDouble(TB_max_Y.Text);
             CB_count_GU.SelectedIndex = 0;
+            is_visible_nu = false;
            
         }
 
@@ -73,13 +75,19 @@ namespace RNUT
             timer1.Interval = Convert.ToInt32(NUD_Tick.Text);
             t = Convert.ToDouble(TB_t.Text);
             time = 0;
+            BT_tabl.Enabled = false;
             timer1.Start();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             dif.start(Convert.ToInt32(NUD_mem_step.Text));
-            dif.plot(zedGraphControl1);
+            dif.plot(zedGraphControl1, LB_norm_u1,LB_norm_u2);
+            if (is_visible_nu)
+            {
+                dif.plot_star(zedGraphControl1);
+            }
             time += t * Convert.ToDouble(NUD_mem_step.Text);
             LB_Time.Text = "Текущее время = " + Convert.ToString(time);
             LB_Step.Text = "Слой = " + dif.get_layerNum();
@@ -88,6 +96,7 @@ namespace RNUT
         private void BT_Stop_Click(object sender, EventArgs e)
         {
             timer1.Stop();
+            BT_tabl.Enabled = true;
         }
 
         private void BT_Start_Click(object sender, EventArgs e)
@@ -104,6 +113,7 @@ namespace RNUT
                 timer1.Interval = Convert.ToInt32(NUD_Tick.Text);
                 timer1.Start();
             }
+            BT_tabl.Enabled = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -193,6 +203,23 @@ namespace RNUT
         private void NUD_GU_5_KeyUp(object sender, KeyEventArgs e)
         {
             NUD_GU_5_ValueChanged(sender, e);
+        }
+
+        private void CB_nu_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CB_nu.Checked)
+            {
+                is_visible_nu = true;
+            } 
+            else
+            {
+                is_visible_nu = false;
+            }
+        }
+
+        private void BT_tabl_Click(object sender, EventArgs e)
+        {
+            dif.Show_tabl();
         }
 
       
