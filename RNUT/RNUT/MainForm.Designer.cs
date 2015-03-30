@@ -407,9 +407,9 @@
             // 
             // zedGraphControl1
             // 
-            this.zedGraphControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.zedGraphControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.zedGraphControl1.Location = new System.Drawing.Point(12, 12);
             this.zedGraphControl1.Name = "zedGraphControl1";
             this.zedGraphControl1.ScrollGrace = 0D;
@@ -419,7 +419,7 @@
             this.zedGraphControl1.ScrollMinX = 0D;
             this.zedGraphControl1.ScrollMinY = 0D;
             this.zedGraphControl1.ScrollMinY2 = 0D;
-            this.zedGraphControl1.Size = new System.Drawing.Size(652, 500);
+            this.zedGraphControl1.Size = new System.Drawing.Size(652, 539);
             this.zedGraphControl1.TabIndex = 30;
             // 
             // BT_Start
@@ -503,7 +503,7 @@
             this.LB_Time.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LB_Time.AutoSize = true;
             this.LB_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.LB_Time.Location = new System.Drawing.Point(6, 47);
+            this.LB_Time.Location = new System.Drawing.Point(6, 23);
             this.LB_Time.Name = "LB_Time";
             this.LB_Time.Size = new System.Drawing.Size(105, 13);
             this.LB_Time.TabIndex = 39;
@@ -838,7 +838,7 @@
             this.GB_GRID.Controls.Add(this.NUD_n);
             this.GB_GRID.Controls.Add(this.TB_t);
             this.GB_GRID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GB_GRID.Location = new System.Drawing.Point(513, 520);
+            this.GB_GRID.Location = new System.Drawing.Point(513, 559);
             this.GB_GRID.Name = "GB_GRID";
             this.GB_GRID.Size = new System.Drawing.Size(273, 78);
             this.GB_GRID.TabIndex = 62;
@@ -853,7 +853,7 @@
             this.GB_ProgramParameters.Controls.Add(this.LB_Tick);
             this.GB_ProgramParameters.Controls.Add(this.NUD_mem_step);
             this.GB_ProgramParameters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GB_ProgramParameters.Location = new System.Drawing.Point(255, 520);
+            this.GB_ProgramParameters.Location = new System.Drawing.Point(255, 559);
             this.GB_ProgramParameters.Name = "GB_ProgramParameters";
             this.GB_ProgramParameters.Size = new System.Drawing.Size(252, 78);
             this.GB_ProgramParameters.TabIndex = 63;
@@ -868,7 +868,7 @@
             this.GB_GraphParameters.Controls.Add(this.LB_Y_max);
             this.GB_GraphParameters.Controls.Add(this.TB_max_Y);
             this.GB_GraphParameters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GB_GraphParameters.Location = new System.Drawing.Point(792, 520);
+            this.GB_GraphParameters.Location = new System.Drawing.Point(792, 559);
             this.GB_GraphParameters.Name = "GB_GraphParameters";
             this.GB_GraphParameters.Size = new System.Drawing.Size(171, 78);
             this.GB_GraphParameters.TabIndex = 64;
@@ -880,7 +880,7 @@
             this.LB_Step.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LB_Step.AutoSize = true;
             this.LB_Step.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.LB_Step.Location = new System.Drawing.Point(6, 60);
+            this.LB_Step.Location = new System.Drawing.Point(6, 49);
             this.LB_Step.Name = "LB_Step";
             this.LB_Step.Size = new System.Drawing.Size(50, 13);
             this.LB_Step.TabIndex = 65;
@@ -888,19 +888,21 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(671, 226);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(289, 288);
+            this.tabControl1.Size = new System.Drawing.Size(289, 327);
             this.tabControl1.TabIndex = 66;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.LB_norm_u2);
             this.tabPage1.Controls.Add(this.BT_tablU2);
+            this.tabPage1.Controls.Add(this.LB_norm_u1);
             this.tabPage1.Controls.Add(this.CB_nu);
             this.tabPage1.Controls.Add(this.BT_tablU1);
             this.tabPage1.Controls.Add(this.CB_STAT_SOL);
@@ -911,7 +913,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(281, 262);
+            this.tabPage1.Size = new System.Drawing.Size(281, 301);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Одиночный эксперимент";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -952,7 +954,7 @@
             // CB_STAT_SOL
             // 
             this.CB_STAT_SOL.AutoSize = true;
-            this.CB_STAT_SOL.Location = new System.Drawing.Point(5, 245);
+            this.CB_STAT_SOL.Location = new System.Drawing.Point(6, 245);
             this.CB_STAT_SOL.Name = "CB_STAT_SOL";
             this.CB_STAT_SOL.Size = new System.Drawing.Size(198, 17);
             this.CB_STAT_SOL.TabIndex = 62;
@@ -1508,12 +1510,10 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.Controls.Add(this.LB_norm_u2);
-            this.groupBox1.Controls.Add(this.LB_norm_u1);
             this.groupBox1.Controls.Add(this.LB_Time);
             this.groupBox1.Controls.Add(this.LB_Step);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 520);
+            this.groupBox1.Location = new System.Drawing.Point(12, 559);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(237, 78);
             this.groupBox1.TabIndex = 67;
@@ -1525,7 +1525,7 @@
             this.LB_norm_u2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LB_norm_u2.AutoSize = true;
             this.LB_norm_u2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.LB_norm_u2.Location = new System.Drawing.Point(6, 34);
+            this.LB_norm_u2.Location = new System.Drawing.Point(6, 278);
             this.LB_norm_u2.Name = "LB_norm_u2";
             this.LB_norm_u2.Size = new System.Drawing.Size(74, 13);
             this.LB_norm_u2.TabIndex = 67;
@@ -1536,7 +1536,7 @@
             this.LB_norm_u1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LB_norm_u1.AutoSize = true;
             this.LB_norm_u1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.LB_norm_u1.Location = new System.Drawing.Point(6, 18);
+            this.LB_norm_u1.Location = new System.Drawing.Point(6, 265);
             this.LB_norm_u1.Name = "LB_norm_u1";
             this.LB_norm_u1.Size = new System.Drawing.Size(74, 13);
             this.LB_norm_u1.TabIndex = 66;
@@ -1550,7 +1550,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 608);
+            this.ClientSize = new System.Drawing.Size(967, 647);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.GB_GraphParameters);
             this.Controls.Add(this.GB_eqParameters);
